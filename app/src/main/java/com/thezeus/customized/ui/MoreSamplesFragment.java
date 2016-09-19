@@ -61,8 +61,8 @@ public class MoreSamplesFragment extends RowsFragment {
                     Intent intent = new Intent(getActivity(), GuidedStepActivity.class);
                     startActivity(intent);
                 } else {
-                    Intent intent = new Intent(getActivity(), SettingsActivity.class);
-                    getActivity().startActivity(intent);
+//                    Intent intent = new Intent(getActivity(), SettingsActivity.class);
+//                    getActivity().startActivity(intent);
                 }
             }
         });

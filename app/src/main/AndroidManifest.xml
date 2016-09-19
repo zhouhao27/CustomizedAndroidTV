@@ -103,8 +103,6 @@
             android:name="com.thezeus.customized.recommendation.UpdateRecommendationsService"
             android:enabled="true" />
 
-        <activity android:name="com.thezeus.customized.ui.SettingsActivity" />
-
         <activity android:name="com.thezeus.customized.ui.GuidedStepActivity"
                   android:theme="@style/Theme.Example.Leanback.GuidedStep" />
     </application>

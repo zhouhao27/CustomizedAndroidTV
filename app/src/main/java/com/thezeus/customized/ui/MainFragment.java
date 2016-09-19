@@ -186,7 +186,7 @@ public class MainFragment extends BrowseFragment implements
         gridRowAdapter.add(getString(R.string.grid_view));
         gridRowAdapter.add(getString(R.string.guidedstep_first_title));
         gridRowAdapter.add(getString(R.string.error_fragment));
-        gridRowAdapter.add(getString(R.string.personal_settings));
+//        gridRowAdapter.add(getString(R.string.personal_settings));
         mRowsAdapter.add(new ListRow(gridHeader, gridRowAdapter));
 
         setAdapter(mRowsAdapter);
@@ -289,8 +289,7 @@ public class MainFragment extends BrowseFragment implements
                     Intent intent = new Intent(getActivity(), BrowseErrorActivity.class);
                     startActivity(intent);
                 } else {
-                    Intent intent = new Intent(getActivity(), SettingsActivity.class);
-                    getActivity().startActivity(intent);
+                    // anything else?
                 }
             }
         }

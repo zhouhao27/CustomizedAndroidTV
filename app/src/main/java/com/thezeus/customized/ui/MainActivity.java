@@ -43,15 +43,6 @@ import java.util.LinkedHashMap;
  */
 public class MainActivity extends Activity {
 
-    /**
-     * Change this value to toggle between the stock demo
-     * and the custom demo.
-     */
-    private static boolean useStandardBrowseFragment = false;
-    public static final String PREFS_ROOT = "PREFS_ROOT";
-    public static final String PREFS_USE_STANDARD_BROWSE_FRAGMENT = PREFS_ROOT + ".EXTRA_USE_STANDARD_BROWSE_FRAGMENT";
-
-    private int standardBrowseFragmentLayoutId = R.layout.main;
     private int customBrowseFragmentLayoutId = R.layout.custom;
 
     private SearchOrbView orbView;
@@ -74,17 +65,6 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        SharedPreferences prefs = getSharedPreferences(PREFS_ROOT, Context.MODE_PRIVATE);
-        useStandardBrowseFragment = prefs.getBoolean(PREFS_USE_STANDARD_BROWSE_FRAGMENT, false);
-
-        /*
-         * This flag discriminates the use of the CustomBrowseFragment widget.
-         */
-        if (useStandardBrowseFragment) {
-            setContentView(standardBrowseFragmentLayoutId);
-            return;
-        }
 
         setContentView(customBrowseFragmentLayoutId);
 
@@ -270,10 +250,6 @@ public class MainActivity extends Activity {
 
     public void updateCurrentFragment(Fragment fragment) {
         currentFragment = fragment;
-    }
-
-    public static boolean isUsingStandardBrowseFragment() {
-        return useStandardBrowseFragment;
     }
 
     @Override
